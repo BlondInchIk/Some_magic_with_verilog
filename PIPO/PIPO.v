@@ -1,50 +1,22 @@
-`timescale 1ns / 1ps
-module pipo_design(input clk,input [3:0]b,output[3:0]a);
-
-  d_ff d1(
-    .clk(clk),
-    .d(b[3]),
-    .q(a[3]),
-    .rst()
-    );
-    
-  d_ff d2(
-    .clk(clk),
-    .d(b[2]),
-    .q(a[2]),
-    .rst()
-    );
-
-  d_ff d3(
-    .clk(clk),
-    .d(b[1]),
-    .q(a[1]),
-    .rst()
-    );
-
-  d_ff d4(
-    .clk(clk),
-    .d(b[0]),
-    .q(a[0]),
-    .rst()
-    );
-
-endmodule
-
-// d flip flop
-
-module d_ff (
-  input clk,    // clock input
-  input d,      // data input
-  input rst,    // asynchronous reset input
-  output reg q  // output
+module pipo #(parameter DATA_WIDTH = 8) (
+    input wire clk,
+    input wire reset,
+    input wire enable,
+    input wire set_all_ones,
+    input wire [DATA_WIDTH-1:0] data_in,
+    output reg [DATA_WIDTH-1:0] data_out
 );
 
-always @(posedge clk ) begin
-if (rst) // asynchronous reset
-    q <= 1'b0;
-else // normal operation
-    q <= d;
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        data_out <= 0;
+    end else if (enable) begin
+        if (set_all_ones) begin
+            data_out <= {DATA_WIDTH{1'b1}};
+        end else begin
+            data_out <= data_in;
+        end
+    end
 end
 
 endmodule

@@ -1,51 +1,22 @@
-`timescale 1ns / 1ps
+module sipo #(parameter DATA_WIDTH = 8) (
+    input wire clk,
+    input wire reset,
+    input wire enable,
+    input wire set_all_ones,
+    input wire data_in,
+    output reg [DATA_WIDTH-1:0] data_out
+);
 
-module sipo_shift_register_design(input clk,b,output[3:0]q);
-
-d_ff dut1(
-    .clk(clk),
-    .d(b),
-    .q(q[3]),
-    .rst()
-    );
-
-d_ff dut2(
-    .clk(clk),
-    .d(q[3]),
-    .q(q[2]),
-    .rst()
-    );
-
-d_ff dut3(
-    .clk(clk),
-    .d(q[2]),
-    .q(q[1]),
-    .rst()
-    );
-
-d_ff dut4(
-    .clk(clk),
-    .d(q[1]),
-    .q(q[0]),
-    .rst()
-    );
-
-endmodule
-
-// d flip flop
-
-module d_ff (
-    input clk,    
-    input d,      
-    input rst,    
-    output reg q);
-
-    always @(posedge clk) 
-    begin
-    if (rst)
-        q <= 1'b0;
-    else
-        q <= d;
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        data_out <= 0;
+    end else if (enable) begin
+        if (set_all_ones) begin
+            data_out <= {DATA_WIDTH{1'b1}};
+        end else begin
+            data_out <= {data_in, data_out[DATA_WIDTH-1:1]};
+        end
     end
+end
 
 endmodule

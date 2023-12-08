@@ -17,9 +17,9 @@ shift_reg_with_display dut (
     .HEX0(HEX0)
 );
 
-// генерация тактового сигнала
-always begin
-    #5 CLOCK_50 = ~CLOCK_50;
+initial begin
+    clk = 0;
+    forever #5 clk = clk;
 end
 
 // генерация входных сигналов
@@ -29,5 +29,11 @@ initial begin
     #10 KEY = 2'b01; // изменение значения ключей после некоторого времени
     #100 $finish; // завершение симуляции после некоторого времени
 end
+
+  initial begin
+    $dumpfile("dump.vcd");  // Запись VCD-файла для отладки
+    $dumpvars(0, testbench);  // Запись переменных в VCD-файл
+    $monitor($time, "out = %b", data_out);  // Вывод значения data_out во время симуляции
+  end
 
 endmodule

@@ -1,26 +1,50 @@
-module siso #(parameter DATA_WIDTH = 8) (
-    input wire clk,
-    input wire reset,
-    input wire enable,
-    input wire set_all_ones,
-    input wire data_in,
-    output reg data_out
-);
+`timescale 1ns / 1ps
+module SISO(input clk,b,output q);
+wire w1,w2,w3;
 
-reg [DATA_WIDTH-1:0] shift_reg;
+d_ff dut1(
+    .clk(clk),
+    .d(b),
+    .q(w1),
+    .rst()
+    );
 
-always @(posedge clk or posedge reset) begin
-    if (reset) begin
-        shift_reg <= 0;
-    end else if (enable) begin
-        if (set_all_ones) begin
-            shift_reg <= {DATA_WIDTH{1'b1}};
-        end else begin
-            shift_reg <= {shift_reg[DATA_WIDTH-2:0], data_in};
-        end
+d_ff dut2(
+    .clk(clk),
+    .d(w1),
+    .q(w2),
+    .rst()
+    );
+    
+d_ff dut3(
+    .clk(clk),
+    .d(w2),
+    .q(w3),
+    .rst()
+    );
+
+d_ff dut4(
+    .clk(clk),
+    .d(w3),
+    .q(q),
+    .rst()
+    );
+
+endmodule
+
+// d flip flop
+module d_ff (
+    input clk,    
+    input d,      
+    input rst,    
+    output reg q);
+
+    always @(posedge clk) 
+    begin
+    if (rst)
+        q <= 1'b0;
+    else
+        q <= d;
     end
-end
-
-assign data_out = shift_reg[DATA_WIDTH-1];
 
 endmodule

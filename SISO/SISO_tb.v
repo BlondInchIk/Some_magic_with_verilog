@@ -4,7 +4,7 @@ module siso_tb();
 reg clk,b;
 wire q;
 
-siso_design uut(.clk(clk),.b(b),.q(q));
+SISO uut(.clk(clk),.b(b),.q(q));
 
 initial
 begin

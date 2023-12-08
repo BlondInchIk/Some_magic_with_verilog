@@ -1,10 +1,10 @@
 // testbench
-module siso_tb();
+module SISO_tb();
 
-reg clk,b;
+reg clk,b,reset;
 wire q;
 
-SISO uut(.clk(clk),.b(b),.q(q));
+SISO uut(.clk(clk),.b(b),.q(q),.reset(reset));
 
 initial
 begin
@@ -14,7 +14,7 @@ end
 
 initial
 begin
-$monitor("clk=%d,b=%d,q=%d",clk,b,q);
+$monitor("clk=%d,b=%d,q=%d,reset=%d",clk,b,q,reset);
 end
 
 initial
@@ -22,8 +22,10 @@ begin
 b=1;
 #10;
 b=1;
-#10;
+reset=1;
+#10
 b=1;
+reset=0;
 #10;
 b=0;
 

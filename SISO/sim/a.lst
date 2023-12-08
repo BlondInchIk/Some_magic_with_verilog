@@ -1,18 +1,18 @@
-clk=0,b=1,q=x
-clk=1,b=1,q=x
-clk=0,b=1,q=x
-clk=1,b=1,q=x
-clk=0,b=1,q=x
-clk=1,b=1,q=x
-clk=0,b=0,q=x
-clk=1,b=0,q=1
-clk=0,b=0,q=1
-clk=1,b=0,q=1
-clk=0,b=0,q=1
-clk=1,b=0,q=1
-clk=0,b=0,q=1
-clk=1,b=0,q=0
-clk=0,b=0,q=0
-clk=1,b=0,q=0
-..\SISO_tb.v:31: $finish called at 80000 (1ps)
-clk=0,b=0,q=0
+clk=0,b=1,q=x,reset=x
+clk=1,b=1,q=1,reset=x
+clk=0,b=1,q=1,reset=1
+clk=1,b=1,q=0,reset=1
+clk=0,b=1,q=0,reset=0
+clk=1,b=1,q=1,reset=0
+clk=0,b=0,q=1,reset=0
+clk=1,b=0,q=0,reset=0
+clk=0,b=0,q=0,reset=0
+clk=1,b=0,q=0,reset=0
+clk=0,b=0,q=0,reset=0
+clk=1,b=0,q=0,reset=0
+clk=0,b=0,q=0,reset=0
+clk=1,b=0,q=0,reset=0
+clk=0,b=0,q=0,reset=0
+clk=1,b=0,q=0,reset=0
+..\SISO_tb.v:33: $finish called at 80000 (1ps)
+clk=0,b=0,q=0,reset=0

@@ -1,22 +1,15 @@
-module sipo #(parameter DATA_WIDTH = 8) (
-    input wire clk,
-    input wire reset,
-    input wire enable,
-    input wire set_all_ones,
-    input wire data_in,
-    output reg [DATA_WIDTH-1:0] data_out
-);
+module sipo_4bit #(parameter WIDTH=4) (input wire clk, input wire reset, input wire data_in, input wire enable,
+                                      input wire set_all_ones, output reg [WIDTH-1:0] data_out);
 
-always @(posedge clk or posedge reset) begin
-    if (reset) begin
-        data_out <= 0;
-    end else if (enable) begin
-        if (set_all_ones) begin
-            data_out <= {DATA_WIDTH{1'b1}};
-        end else begin
-            data_out <= {data_in, data_out[DATA_WIDTH-1:1]};
-        end
+  always @(posedge clk or posedge reset) begin
+    if (reset)
+      data_out <= {WIDTH{1'b0}};  // Сброс данных при сигнале reset
+    else if (enable) begin
+      if (set_all_ones)
+        data_out <= {WIDTH{1'b1}};  // Установка всех разрядов в 1
+      else
+        data_out <= {data_out[WIDTH-2:0], data_in};  // Загрузка данных в первый разряд
     end
-end
+  end
 
 endmodule

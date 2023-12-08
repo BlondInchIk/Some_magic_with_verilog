@@ -1,0 +1,78 @@
+$date
+	Fri Dec 08 04:32:27 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module piso_4bit_tb $end
+$var wire 1 ! data_out $end
+$var parameter 32 " WIDTH $end
+$var reg 1 # clk $end
+$var reg 4 $ data_in [3:0] $end
+$var reg 1 % enable $end
+$var reg 1 & reset $end
+$var reg 1 ' set_all_ones $end
+$scope module dut $end
+$var wire 1 # clk $end
+$var wire 4 ( data_in [3:0] $end
+$var wire 1 % enable $end
+$var wire 1 & reset $end
+$var wire 1 ' set_all_ones $end
+$var parameter 32 ) WIDTH $end
+$var reg 1 ! data_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 )
+b100 "
+$end
+#0
+$dumpvars
+b0 (
+0'
+1&
+0%
+b0 $
+0#
+0!
+$end
+#5
+1#
+#10
+0#
+0&
+#15
+1#
+#20
+0#
+1%
+#25
+1#
+#30
+0#
+b1010 $
+b1010 (
+#35
+1#
+#40
+0#
+1'
+#45
+1#
+#50
+0#
+0'
+#55
+1#
+#60
+0#
+0%
+#65
+1#
+#70
+0#

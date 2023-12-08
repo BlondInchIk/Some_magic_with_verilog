@@ -1,25 +1,44 @@
-// test bench
-module pipo_tb();
-reg clk;
-reg [3:0]b;
-wire [3:0]a;
+module testbench;
 
-pipo_design uut(.clk(clk),.b(b),.a(a));
+  reg [WIDTH-1:0] data_in;
+  reg enable;
+  reg load_all_ones;
+  wire [WIDTH-1:0] data_out;
 
-initial
-begin
-clk=0;
-forever #10clk=~clk;
-end
+  parameter WIDTH = 8;
 
-initial
-begin
-#10;
-b=4'b1000;
-#10;
-b=4'b0101;
-#10;
-$display("clk=%d,b=%d,a=%d",clk,b,a);
-#100 $finish;
-end
+  pipo #(.WIDTH(WIDTH)) dut (
+    .data_in(data_in),
+    .enable(enable),
+    .load_all_ones(load_all_ones),
+    .data_out(data_out)
+  );
+
+  initial begin
+
+    enable = 0;
+    load_all_ones = 0;
+    data_in = 8'b10101010;
+
+    #10;
+
+    enable = 1;
+    load_all_ones = 0;
+    data_in = 8'b11001100;
+
+    #10;
+
+    enable = 1;
+    load_all_ones = 1;
+    data_in = 8'b11110000;
+
+    #10;
+
+    #10 $finish;
+  end
+  initial begin
+    $dumpfile("dump.vcd");  // Запись VCD-файла для отладки
+    $dumpvars(0, testbench);  // Запись переменных в VCD-файл
+    $monitor($time, "data_out = %b", data_out);  // Вывод значения data_out во время симуляции
+  end
 endmodule

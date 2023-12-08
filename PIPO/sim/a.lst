@@ -1,0 +1,4 @@
+VCD info: dumpfile dump.vcd opened for output.
+                   0data_out = xxxxxxxx
+                  10data_out = 11001100
+..\PIPO_tb.v:37: $finish called at 40 (1s)

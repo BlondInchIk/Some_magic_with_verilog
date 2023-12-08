@@ -1,0 +1,7 @@
+VCD info: dumpfile dump.vcd opened for output.
+                   0data_out = 0000
+                  35data_out = 0001
+                  45data_out = 0010
+                  55data_out = 0101
+                  65data_out = 1111
+..\SIPO_tb.v:42: $finish called at 90 (1s)

@@ -1,0 +1,27 @@
+VCD info: dumpfile dump.vcd opened for output.
+rstn=0 data=1, en=0, dir=0, out=xxxxxxxxxxxxxxxx
+rstn=0 data=1, en=0, dir=0, out=0000000000000000
+rstn=1 data=1, en=1, dir=0, out=0000000000000000
+rstn=1 data=0, en=1, dir=0, out=0000000000000001
+rstn=1 data=1, en=1, dir=0, out=0000000000000010
+rstn=1 data=0, en=1, dir=0, out=0000000000000101
+rstn=1 data=1, en=1, dir=0, out=0000000000001010
+rstn=1 data=0, en=1, dir=0, out=0000000000010101
+rstn=1 data=1, en=1, dir=0, out=0000000000101010
+rstn=1 data=0, en=1, dir=0, out=0000000001010101
+rstn=1 data=0, en=1, dir=1, out=0000000001010101
+rstn=1 data=1, en=1, dir=1, out=0000000000101010
+rstn=1 data=0, en=1, dir=1, out=1000000000010101
+rstn=1 data=1, en=1, dir=1, out=0100000000001010
+rstn=1 data=0, en=1, dir=1, out=1010000000000101
+rstn=1 data=1, en=1, dir=1, out=0101000000000010
+rstn=1 data=0, en=1, dir=1, out=1010100000000001
+rstn=1 data=1, en=1, dir=1, out=0101010000000000
+rstn=1 data=1, en=1, dir=1, out=1010101000000000
+rstn=1 data=1, en=1, dir=1, out=1101010100000000
+rstn=1 data=1, en=1, dir=1, out=1110101010000000
+rstn=1 data=1, en=1, dir=1, out=1111010101000000
+rstn=1 data=1, en=1, dir=1, out=1111101010100000
+rstn=1 data=1, en=1, dir=1, out=1111110101010000
+..\barrelShifter_tb.v:45: $finish called at 430 (1s)
+rstn=1 data=1, en=1, dir=1, out=1111111010101000

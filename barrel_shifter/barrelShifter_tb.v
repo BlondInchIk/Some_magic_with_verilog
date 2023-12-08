@@ -27,8 +27,8 @@
         data <= 'h1;  
     end  
     
-    initial begin  
-    
+    initial begin   
+        $monitor ("rstn=%0b data=%b, en=%0b, dir=%0b, out=%b", rstn, data, en, dir, out);
         rstn <= 0;  
         #20 rstn <= 1;  
             en <= 1;  
@@ -42,9 +42,11 @@
     
         repeat (7) @ (posedge clk);  
     
-        $finish;  
+        $finish; 
+         
     end  
     
-    Initial  
-        $monitor ("rstn=%0b data=%b, en=%0b, dir=%0b, out=%b", rstn, data, en, dir, out);  
+      initial begin 
+    $dumpfile("dump.vcd"); $dumpvars;
+    end
 endmodule  

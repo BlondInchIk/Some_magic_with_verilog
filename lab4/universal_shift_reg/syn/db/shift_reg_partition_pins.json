@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "p_dout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "p_dout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "p_dout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "p_dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s_left_dout",
+					"strict" : false
+				},
+				{
+					"name" : "s_right_dout",
+					"strict" : false
+				},
+				{
+					"name" : "s_left_din",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "p_din[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "p_din[1]",
+					"strict" : false
+				},
+				{
+					"name" : "p_din[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s_right_din",
+					"strict" : false
+				},
+				{
+					"name" : "p_din[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

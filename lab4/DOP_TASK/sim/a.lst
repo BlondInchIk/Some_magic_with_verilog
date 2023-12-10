@@ -1,0 +1,309 @@
+VCD info: dumpfile waveform.vcd opened for output.
+#################### Starting simulation ####################
+########## RESET start! ##########
+VCD warning: ..\testbench.v:79: $dumpfile called after $dumpvars started,
+                                using existing file (waveform.vcd).
+VCD warning: ignoring signals in previously scanned scope testbench.
+VCD warning: ignoring signals in previously scanned scope testbench.shft.
+VCD warning: ignoring signals in previously scanned scope testbench.async_rst.
+VCD warning: ignoring signals in previously scanned scope testbench.push.
+                   0data_out = xxxxxxxx
+@time=4	seg_out= x	data_out=0xxx	
+                  10data_out = 00000000
+@time=12	seg_out= x	data_out=0x00	
+########## RESET finish!
+ ##########
+@time=20	seg_out= x	data_out=0x00	
+@time=28	seg_out= x	data_out=0x00	
+@time=36	seg_out= x	data_out=0x00	
+@time=44	seg_out= x	data_out=0x00	
+@time=52	seg_out= x	data_out=0x00	
+@time=60	seg_out= x	data_out=0x00	
+@time=68	seg_out= x	data_out=0x00	
+########## Shift enable active ##########
+@time=76	seg_out= x	data_out=0x00	
+@time=84	seg_out= 0	data_out=0x00	
+                  84data_out = 10000000
+@time=92	seg_out= 0	data_out=0x80	
+                  92data_out = 11000000
+@time=100	seg_out= 8	data_out=0xc0	
+                 100data_out = 11100000
+@time=108	seg_out=12	data_out=0xe0	
+                 108data_out = 11110000
+@time=116	seg_out=14	data_out=0xf0	
+                 116data_out = 11111000
+@time=124	seg_out=15	data_out=0xf8	
+                 124data_out = 11111100
+@time=132	seg_out=15	data_out=0xfc	
+                 132data_out = 01111110
+########## Shift enable disable ##########
+
+@time=140	seg_out=15	data_out=0x7e	
+@time=148	seg_out=15	data_out=0x7e	
+@time=156	seg_out=15	data_out=0x7e	
+@time=164	seg_out=15	data_out=0x7e	
+@time=172	seg_out=15	data_out=0x7e	
+@time=180	seg_out=15	data_out=0x7e	
+########## Shift enable active ##########
+@time=188	seg_out=15	data_out=0x7e	
+                 188data_out = 10111111
+@time=196	seg_out= 7	data_out=0xbf	
+                 196data_out = 11011111
+@time=204	seg_out=11	data_out=0xdf	
+                 204data_out = 01101111
+@time=212	seg_out=13	data_out=0x6f	
+                 212data_out = 10110111
+@time=220	seg_out= 6	data_out=0xb7	
+                 220data_out = 11011011
+@time=228	seg_out=11	data_out=0xdb	
+                 228data_out = 01101101
+@time=236	seg_out=13	data_out=0x6d	
+                 236data_out = 10110110
+@time=244	seg_out= 6	data_out=0xb6	
+                 244data_out = 01011011
+@time=252	seg_out=11	data_out=0x5b	
+                 252data_out = 10101101
+########## Shift enable disable ##########
+
+@time=260	seg_out= 5	data_out=0xad	
+@time=268	seg_out= 5	data_out=0xad	
+@time=276	seg_out= 5	data_out=0xad	
+@time=284	seg_out= 5	data_out=0xad	
+@time=292	seg_out= 5	data_out=0xad	
+@time=300	seg_out= 5	data_out=0xad	
+########## Shift enable active ##########
+@time=308	seg_out= 5	data_out=0xad	
+                 308data_out = 01010110
+@time=316	seg_out=10	data_out=0x56	
+                 316data_out = 10101011
+@time=324	seg_out= 5	data_out=0xab	
+                 324data_out = 11010101
+@time=332	seg_out=10	data_out=0xd5	
+                 332data_out = 01101010
+@time=340	seg_out=13	data_out=0x6a	
+                 340data_out = 10110101
+@time=348	seg_out= 6	data_out=0xb5	
+                 348data_out = 01011010
+@time=356	seg_out=11	data_out=0x5a	
+                 356data_out = 00101101
+@time=364	seg_out= 5	data_out=0x2d	
+                 364data_out = 00010110
+@time=372	seg_out= 2	data_out=0x16	
+                 372data_out = 10001011
+########## Shift enable disable ##########
+
+@time=380	seg_out= 1	data_out=0x8b	
+@time=388	seg_out= 1	data_out=0x8b	
+@time=396	seg_out= 1	data_out=0x8b	
+@time=404	seg_out= 1	data_out=0x8b	
+@time=412	seg_out= 1	data_out=0x8b	
+@time=420	seg_out= 1	data_out=0x8b	
+########## Shift enable active ##########
+@time=428	seg_out= 1	data_out=0x8b	
+                 428data_out = 01000101
+@time=436	seg_out= 8	data_out=0x45	
+                 436data_out = 10100010
+@time=444	seg_out= 4	data_out=0xa2	
+                 444data_out = 11010001
+@time=452	seg_out=10	data_out=0xd1	
+                 452data_out = 11101000
+@time=460	seg_out=13	data_out=0xe8	
+                 460data_out = 11110100
+@time=468	seg_out=14	data_out=0xf4	
+                 468data_out = 01111010
+@time=476	seg_out=15	data_out=0x7a	
+                 476data_out = 00111101
+@time=484	seg_out= 7	data_out=0x3d	
+                 484data_out = 00011110
+@time=492	seg_out= 3	data_out=0x1e	
+                 492data_out = 00001111
+########## Shift enable disable ##########
+
+@time=500	seg_out= 1	data_out=0x0f	
+@time=508	seg_out= 1	data_out=0x0f	
+@time=516	seg_out= 1	data_out=0x0f	
+@time=524	seg_out= 1	data_out=0x0f	
+@time=532	seg_out= 1	data_out=0x0f	
+@time=540	seg_out= 1	data_out=0x0f	
+########## Shift enable active ##########
+@time=548	seg_out= 1	data_out=0x0f	
+                 548data_out = 10000111
+@time=556	seg_out= 0	data_out=0x87	
+                 556data_out = 01000011
+@time=564	seg_out= 8	data_out=0x43	
+                 564data_out = 10100001
+@time=572	seg_out= 4	data_out=0xa1	
+                 572data_out = 11010000
+@time=580	seg_out=10	data_out=0xd0	
+                 580data_out = 11101000
+@time=588	seg_out=13	data_out=0xe8	
+                 588data_out = 11110100
+@time=596	seg_out=14	data_out=0xf4	
+                 596data_out = 11111010
+@time=604	seg_out=15	data_out=0xfa	
+                 604data_out = 01111101
+@time=612	seg_out=15	data_out=0x7d	
+                 612data_out = 00111110
+########## Shift enable disable ##########
+
+@time=620	seg_out= 7	data_out=0x3e	
+@time=628	seg_out= 7	data_out=0x3e	
+@time=636	seg_out= 7	data_out=0x3e	
+@time=644	seg_out= 7	data_out=0x3e	
+@time=652	seg_out= 7	data_out=0x3e	
+@time=660	seg_out= 7	data_out=0x3e	
+########## Shift enable active ##########
+@time=668	seg_out= 7	data_out=0x3e	
+                 668data_out = 10011111
+@time=676	seg_out= 3	data_out=0x9f	
+                 676data_out = 11001111
+@time=684	seg_out= 9	data_out=0xcf	
+                 684data_out = 11100111
+@time=692	seg_out=12	data_out=0xe7	
+                 692data_out = 01110011
+@time=700	seg_out=14	data_out=0x73	
+                 700data_out = 00111001
+@time=708	seg_out= 7	data_out=0x39	
+                 708data_out = 00011100
+@time=716	seg_out= 3	data_out=0x1c	
+                 716data_out = 00001110
+@time=724	seg_out= 1	data_out=0x0e	
+                 724data_out = 00000111
+@time=732	seg_out= 0	data_out=0x07	
+                 732data_out = 10000011
+########## Shift enable disable ##########
+
+@time=740	seg_out= 0	data_out=0x83	
+@time=748	seg_out= 0	data_out=0x83	
+@time=756	seg_out= 0	data_out=0x83	
+@time=764	seg_out= 0	data_out=0x83	
+@time=772	seg_out= 0	data_out=0x83	
+@time=780	seg_out= 0	data_out=0x83	
+########## Shift enable active ##########
+@time=788	seg_out= 0	data_out=0x83	
+                 788data_out = 01000001
+@time=796	seg_out= 8	data_out=0x41	
+                 796data_out = 00100000
+@time=804	seg_out= 4	data_out=0x20	
+                 804data_out = 10010000
+@time=812	seg_out= 2	data_out=0x90	
+                 812data_out = 11001000
+@time=820	seg_out= 9	data_out=0xc8	
+                 820data_out = 01100100
+@time=828	seg_out=12	data_out=0x64	
+                 828data_out = 00110010
+@time=836	seg_out= 6	data_out=0x32	
+                 836data_out = 00011001
+@time=844	seg_out= 3	data_out=0x19	
+                 844data_out = 00001100
+@time=852	seg_out= 1	data_out=0x0c	
+                 852data_out = 00000110
+########## Shift enable disable ##########
+
+@time=860	seg_out= 0	data_out=0x06	
+@time=868	seg_out= 0	data_out=0x06	
+@time=876	seg_out= 0	data_out=0x06	
+@time=884	seg_out= 0	data_out=0x06	
+@time=892	seg_out= 0	data_out=0x06	
+@time=900	seg_out= 0	data_out=0x06	
+########## Shift enable active ##########
+@time=908	seg_out= 0	data_out=0x06	
+                 908data_out = 10000011
+@time=916	seg_out= 0	data_out=0x83	
+                 916data_out = 11000001
+@time=924	seg_out= 8	data_out=0xc1	
+                 924data_out = 11100000
+@time=932	seg_out=12	data_out=0xe0	
+                 932data_out = 11110000
+@time=940	seg_out=14	data_out=0xf0	
+                 940data_out = 11111000
+@time=948	seg_out=15	data_out=0xf8	
+                 948data_out = 01111100
+@time=956	seg_out=15	data_out=0x7c	
+                 956data_out = 00111110
+@time=964	seg_out= 7	data_out=0x3e	
+                 964data_out = 10011111
+@time=972	seg_out= 3	data_out=0x9f	
+                 972data_out = 11001111
+########## Shift enable disable ##########
+
+@time=980	seg_out= 9	data_out=0xcf	
+@time=988	seg_out= 9	data_out=0xcf	
+@time=996	seg_out= 9	data_out=0xcf	
+@time=1004	seg_out= 9	data_out=0xcf	
+@time=1012	seg_out= 9	data_out=0xcf	
+@time=1020	seg_out= 9	data_out=0xcf	
+########## Shift enable active ##########
+@time=1028	seg_out= 9	data_out=0xcf	
+                1028data_out = 11100111
+@time=1036	seg_out=12	data_out=0xe7	
+                1036data_out = 01110011
+@time=1044	seg_out=14	data_out=0x73	
+                1044data_out = 00111001
+@time=1052	seg_out= 7	data_out=0x39	
+                1052data_out = 10011100
+@time=1060	seg_out= 3	data_out=0x9c	
+                1060data_out = 11001110
+@time=1068	seg_out= 9	data_out=0xce	
+                1068data_out = 01100111
+@time=1076	seg_out=12	data_out=0x67	
+                1076data_out = 10110011
+@time=1084	seg_out= 6	data_out=0xb3	
+                1084data_out = 11011001
+@time=1092	seg_out=11	data_out=0xd9	
+                1092data_out = 01101100
+########## Shift enable disable ##########
+
+@time=1100	seg_out=13	data_out=0x6c	
+@time=1108	seg_out=13	data_out=0x6c	
+@time=1116	seg_out=13	data_out=0x6c	
+@time=1124	seg_out=13	data_out=0x6c	
+@time=1132	seg_out=13	data_out=0x6c	
+@time=1140	seg_out=13	data_out=0x6c	
+########## Shift enable active ##########
+@time=1148	seg_out=13	data_out=0x6c	
+                1148data_out = 10110110
+@time=1156	seg_out= 6	data_out=0xb6	
+                1156data_out = 11011011
+@time=1164	seg_out=11	data_out=0xdb	
+                1164data_out = 11101101
+@time=1172	seg_out=13	data_out=0xed	
+                1172data_out = 01110110
+@time=1180	seg_out=14	data_out=0x76	
+                1180data_out = 10111011
+@time=1188	seg_out= 7	data_out=0xbb	
+                1188data_out = 11011101
+@time=1196	seg_out=11	data_out=0xdd	
+                1196data_out = 01101110
+@time=1204	seg_out=13	data_out=0x6e	
+                1204data_out = 00110111
+@time=1212	seg_out= 6	data_out=0x37	
+                1212data_out = 00011011
+########## Shift enable disable ##########
+
+@time=1220	seg_out= 3	data_out=0x1b	
+@time=1228	seg_out= 3	data_out=0x1b	
+@time=1236	seg_out= 3	data_out=0x1b	
+@time=1244	seg_out= 3	data_out=0x1b	
+@time=1252	seg_out= 3	data_out=0x1b	
+@time=1260	seg_out= 3	data_out=0x1b	
+@time=1268	seg_out= 3	data_out=0x1b	
+@time=1276	seg_out= 3	data_out=0x1b	
+@time=1284	seg_out= 3	data_out=0x1b	
+@time=1292	seg_out= 3	data_out=0x1b	
+@time=1300	seg_out= 3	data_out=0x1b	
+@time=1308	seg_out= 3	data_out=0x1b	
+@time=1316	seg_out= 3	data_out=0x1b	
+@time=1324	seg_out= 3	data_out=0x1b	
+@time=1332	seg_out= 3	data_out=0x1b	
+@time=1340	seg_out= 3	data_out=0x1b	
+@time=1348	seg_out= 3	data_out=0x1b	
+@time=1356	seg_out= 3	data_out=0x1b	
+@time=1364	seg_out= 3	data_out=0x1b	
+@time=1372	seg_out= 3	data_out=0x1b	
+@time=1380	seg_out= 3	data_out=0x1b	
+@time=1388	seg_out= 3	data_out=0x1b	
+@time=1396	seg_out= 3	data_out=0x1b	
+@time=1404	seg_out= 3	data_out=0x1b	
+@time=1412	seg_out= 3	data_out=0x1b	
+..\testbench.v:69: $finish called at 1416 (1s)

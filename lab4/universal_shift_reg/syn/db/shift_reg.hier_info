@@ -1,0 +1,31 @@
+|shift_reg
+clk => p_dout[0]~reg0.CLK
+clk => p_dout[1]~reg0.CLK
+clk => p_dout[2]~reg0.CLK
+clk => p_dout[3]~reg0.CLK
+rst_n => p_dout.OUTPUTSELECT
+rst_n => p_dout.OUTPUTSELECT
+rst_n => p_dout.OUTPUTSELECT
+rst_n => p_dout.OUTPUTSELECT
+select[0] => Mux0.IN1
+select[0] => Mux1.IN1
+select[0] => Mux2.IN1
+select[0] => Mux3.IN1
+select[1] => Mux0.IN0
+select[1] => Mux1.IN0
+select[1] => Mux2.IN0
+select[1] => Mux3.IN0
+p_din[0] => Mux3.IN2
+p_din[1] => Mux2.IN2
+p_din[2] => Mux1.IN2
+p_din[3] => Mux0.IN2
+s_left_din => Mux3.IN3
+s_right_din => Mux0.IN3
+p_dout[0] << p_dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_dout[1] << p_dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_dout[2] << p_dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p_dout[3] << p_dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s_left_dout << p_dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s_right_dout << p_dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

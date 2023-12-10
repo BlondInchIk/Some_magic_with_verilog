@@ -1,0 +1,126 @@
+VCD info: dumpfile dump.vcd opened for output.
+#################### Starting simulation ####################
+########## RESET start! ##########
+@time=0	 data_out=0xxx	
+@time=10	 data_out=0x00	
+########## RESET finish!
+ ##########
+########## Shift enable active ##########
+@time=84	 data_out=0x80	
+@time=92	 data_out=0xc0	
+@time=100	 data_out=0xe0	
+@time=108	 data_out=0xf0	
+@time=116	 data_out=0xf8	
+@time=124	 data_out=0xfc	
+@time=132	 data_out=0x7e	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=188	 data_out=0xbf	
+@time=196	 data_out=0xdf	
+@time=204	 data_out=0x6f	
+@time=212	 data_out=0xb7	
+@time=220	 data_out=0xdb	
+@time=228	 data_out=0x6d	
+@time=236	 data_out=0xb6	
+@time=244	 data_out=0x5b	
+@time=252	 data_out=0xad	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=308	 data_out=0x56	
+@time=316	 data_out=0xab	
+@time=324	 data_out=0xd5	
+@time=332	 data_out=0x6a	
+@time=340	 data_out=0xb5	
+@time=348	 data_out=0x5a	
+@time=356	 data_out=0x2d	
+@time=364	 data_out=0x16	
+@time=372	 data_out=0x8b	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=428	 data_out=0x45	
+@time=436	 data_out=0xa2	
+@time=444	 data_out=0xd1	
+@time=452	 data_out=0xe8	
+@time=460	 data_out=0xf4	
+@time=468	 data_out=0x7a	
+@time=476	 data_out=0x3d	
+@time=484	 data_out=0x1e	
+@time=492	 data_out=0x0f	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=548	 data_out=0x87	
+@time=556	 data_out=0x43	
+@time=564	 data_out=0xa1	
+@time=572	 data_out=0xd0	
+@time=580	 data_out=0xe8	
+@time=588	 data_out=0xf4	
+@time=596	 data_out=0xfa	
+@time=604	 data_out=0x7d	
+@time=612	 data_out=0x3e	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=668	 data_out=0x9f	
+@time=676	 data_out=0xcf	
+@time=684	 data_out=0xe7	
+@time=692	 data_out=0x73	
+@time=700	 data_out=0x39	
+@time=708	 data_out=0x1c	
+@time=716	 data_out=0x0e	
+@time=724	 data_out=0x07	
+@time=732	 data_out=0x83	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=788	 data_out=0x41	
+@time=796	 data_out=0x20	
+@time=804	 data_out=0x90	
+@time=812	 data_out=0xc8	
+@time=820	 data_out=0x64	
+@time=828	 data_out=0x32	
+@time=836	 data_out=0x19	
+@time=844	 data_out=0x0c	
+@time=852	 data_out=0x06	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=908	 data_out=0x83	
+@time=916	 data_out=0xc1	
+@time=924	 data_out=0xe0	
+@time=932	 data_out=0xf0	
+@time=940	 data_out=0xf8	
+@time=948	 data_out=0x7c	
+@time=956	 data_out=0x3e	
+@time=964	 data_out=0x9f	
+@time=972	 data_out=0xcf	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=1028	 data_out=0xe7	
+@time=1036	 data_out=0x73	
+@time=1044	 data_out=0x39	
+@time=1052	 data_out=0x9c	
+@time=1060	 data_out=0xce	
+@time=1068	 data_out=0x67	
+@time=1076	 data_out=0xb3	
+@time=1084	 data_out=0xd9	
+@time=1092	 data_out=0x6c	
+########## Shift enable disable ##########
+
+########## Shift enable active ##########
+@time=1148	 data_out=0xb6	
+@time=1156	 data_out=0xdb	
+@time=1164	 data_out=0xed	
+@time=1172	 data_out=0x76	
+@time=1180	 data_out=0xbb	
+@time=1188	 data_out=0xdd	
+@time=1196	 data_out=0x6e	
+@time=1204	 data_out=0x37	
+@time=1212	 data_out=0x1b	
+########## Shift enable disable ##########
+
+..\testbench.v:74: $finish called at 1416 (1ns)

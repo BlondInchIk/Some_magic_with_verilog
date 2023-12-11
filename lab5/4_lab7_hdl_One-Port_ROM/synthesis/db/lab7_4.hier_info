@@ -1,0 +1,25 @@
+|lab7_4
+clk => addr_reg[0].CLK
+clk => addr_reg[1].CLK
+clk => addr_reg[2].CLK
+clk => addr_reg[3].CLK
+clk => addr_reg[4].CLK
+clk => addr_reg[5].CLK
+addr[0] => addr_reg[0].DATAIN
+addr[1] => addr_reg[1].DATAIN
+addr[2] => addr_reg[2].DATAIN
+addr[3] => addr_reg[3].DATAIN
+addr[4] => addr_reg[4].DATAIN
+addr[5] => addr_reg[5].DATAIN
+data_out[0] <= rom.DATAOUT
+data_out[1] <= rom.DATAOUT1
+data_out[2] <= rom.DATAOUT2
+data_out[3] <= rom.DATAOUT3
+addr_out[0] <= addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+addr_out[1] <= addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+addr_out[2] <= addr_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+addr_out[3] <= addr_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+addr_out[4] <= addr_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+addr_out[5] <= addr_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+
+

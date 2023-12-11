@@ -1,0 +1,247 @@
+$date
+	Sun Dec 10 22:23:52 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 4 ! data_out [3:0] $end
+$var wire 6 " addr_out [5:0] $end
+$var reg 6 # addr [5:0] $end
+$var reg 1 $ clk $end
+$var reg 4 % data_in [3:0] $end
+$var reg 1 & we $end
+$scope module dut $end
+$var wire 6 ' addr [5:0] $end
+$var wire 6 ( addr_out [5:0] $end
+$var wire 1 $ clk $end
+$var wire 4 ) data_in [3:0] $end
+$var wire 4 * data_out [3:0] $end
+$var wire 1 + w_clk $end
+$var wire 1 , w_we $end
+$var wire 1 & we $end
+$var parameter 32 - ADDR_WIDTH $end
+$var parameter 32 . DATA_WIDTH $end
+$var reg 6 / addr_reg [5:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 .
+b110 -
+$end
+#0
+$dumpvars
+b0 /
+1,
+1+
+b0 *
+b0 )
+b0 (
+b0 '
+0&
+b0 %
+0$
+b0 #
+b0 "
+b0 !
+$end
+#10
+0+
+1$
+#20
+1+
+0$
+#30
+0+
+1$
+#40
+b1 !
+b1 *
+b1 "
+b1 (
+b1 /
+1+
+0$
+b1 #
+b1 '
+b1 %
+b1 )
+#50
+0+
+1$
+#60
+b10 !
+b10 *
+b10 "
+b10 (
+b10 /
+1+
+0$
+b10 #
+b10 '
+b10 %
+b10 )
+#70
+0+
+1$
+#80
+b11 !
+b11 *
+b11 "
+b11 (
+b11 /
+1+
+0$
+b11 #
+b11 '
+b11 %
+b11 )
+#90
+0+
+1$
+#100
+b100 !
+b100 *
+b100 "
+b100 (
+b100 /
+1+
+0$
+b100 #
+b100 '
+b100 %
+b100 )
+#110
+0+
+1$
+#120
+b101 !
+b101 *
+b101 "
+b101 (
+b101 /
+1+
+0$
+b101 #
+b101 '
+b101 %
+b101 )
+#130
+0+
+1$
+#140
+b110 !
+b110 *
+b110 "
+b110 (
+b110 /
+1+
+0$
+b110 #
+b110 '
+b110 %
+b110 )
+#150
+0+
+1$
+#160
+b0 !
+b0 *
+b0 "
+b0 (
+b0 /
+1+
+0,
+0$
+b0 #
+b0 '
+1&
+#170
+0+
+1$
+#180
+b1 !
+b1 *
+b1 "
+b1 (
+b1 /
+1+
+0$
+b1 #
+b1 '
+#190
+0+
+1$
+#200
+b10 !
+b10 *
+b10 "
+b10 (
+b10 /
+1+
+0$
+b10 #
+b10 '
+#210
+0+
+1$
+#220
+b11 !
+b11 *
+b11 "
+b11 (
+b11 /
+1+
+0$
+b11 #
+b11 '
+#230
+0+
+1$
+#240
+b100 !
+b100 *
+b100 "
+b100 (
+b100 /
+1+
+0$
+b100 #
+b100 '
+#250
+0+
+1$
+#260
+b101 !
+b101 *
+b101 "
+b101 (
+b101 /
+1+
+0$
+b101 #
+b101 '
+#270
+0+
+1$
+#280
+b110 !
+b110 *
+b110 "
+b110 (
+b110 /
+1+
+0$
+b110 #
+b110 '
+#290
+0+
+1$
+#300
+1+
+0$

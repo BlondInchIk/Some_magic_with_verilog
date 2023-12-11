@@ -1,0 +1,196 @@
+$date
+	Sun Dec 10 22:08:41 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 4 ! LEDR [3:0] $end
+$var reg 7 " SW [6:0] $end
+$var reg 1 # clk $end
+$scope module dut $end
+$var wire 4 $ LEDR [3:0] $end
+$var wire 7 % SW [6:0] $end
+$var wire 1 # clk $end
+$var wire 4 & reg3 [3:0] $end
+$var wire 4 ' reg2 [3:0] $end
+$var wire 4 ( reg1 [3:0] $end
+$var wire 4 ) reg0 [3:0] $end
+$var parameter 32 * ADDR_WIDTH $end
+$var parameter 32 + DATA_WIDTH $end
+$var reg 4 , mux_out [3:0] $end
+$var reg 4 - w_we [3:0] $end
+$scope module register0 $end
+$var wire 1 # clk $end
+$var wire 4 . d [3:0] $end
+$var wire 1 / ena $end
+$var parameter 32 0 SIZE $end
+$var reg 4 1 q [3:0] $end
+$upscope $end
+$scope module register1 $end
+$var wire 1 # clk $end
+$var wire 4 2 d [3:0] $end
+$var wire 1 3 ena $end
+$var parameter 32 4 SIZE $end
+$var reg 4 5 q [3:0] $end
+$upscope $end
+$scope module register2 $end
+$var wire 1 # clk $end
+$var wire 4 6 d [3:0] $end
+$var wire 1 7 ena $end
+$var parameter 32 8 SIZE $end
+$var reg 4 9 q [3:0] $end
+$upscope $end
+$scope module register3 $end
+$var wire 1 # clk $end
+$var wire 4 : d [3:0] $end
+$var wire 1 ; ena $end
+$var parameter 32 < SIZE $end
+$var reg 4 = q [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 <
+b100 8
+b100 4
+b100 0
+b100 +
+b10 *
+$end
+#0
+$dumpvars
+bx =
+0;
+b1111 :
+bx 9
+07
+b1111 6
+bx 5
+03
+b1111 2
+bx 1
+1/
+b1111 .
+b1 -
+bx ,
+bx )
+bx (
+bx '
+bx &
+b1001111 %
+bx $
+1#
+b1001111 "
+bx !
+$end
+#10
+0#
+#20
+b1111 !
+b1111 $
+b1111 ,
+b1111 )
+b1111 1
+1#
+#25
+0/
+13
+b10 -
+bx !
+bx $
+bx ,
+b1011111 "
+b1011111 %
+#30
+0#
+#40
+b1111 !
+b1111 $
+b1111 ,
+b1111 (
+b1111 5
+1#
+#45
+03
+17
+b100 -
+bx !
+bx $
+bx ,
+b1101111 "
+b1101111 %
+#50
+0#
+#60
+b1111 !
+b1111 $
+b1111 ,
+b1111 '
+b1111 9
+1#
+#65
+07
+1;
+b1000 -
+bx !
+bx $
+bx ,
+b1111111 "
+b1111111 %
+#70
+0#
+#80
+b1111 !
+b1111 $
+b1111 ,
+b1111 &
+b1111 =
+1#
+#90
+0#
+#100
+1#
+#105
+0;
+b0 -
+b0 .
+b0 2
+b0 6
+b0 :
+b0 "
+b0 %
+#110
+0#
+#120
+1#
+#125
+b10000 "
+b10000 %
+#130
+0#
+#140
+1#
+#145
+b100000 "
+b100000 %
+#150
+0#
+#160
+1#
+#165
+b110000 "
+b110000 %
+#170
+0#
+#180
+1#
+#190
+0#
+#200
+1#

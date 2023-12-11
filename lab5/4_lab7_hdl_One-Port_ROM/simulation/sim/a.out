@@ -1,0 +1,108 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001576b63ac10 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -9;
+v000001576b4a2e00_0 .var "addr", 5 0;
+v000001576b4d31c0_0 .net "addr_out", 5 0, L_000001576b4d4830;  1 drivers
+v000001576b4d3260_0 .var "clk", 0 0;
+v000001576b4d3530_0 .net "data_out", 3 0, L_000001576b4d4910;  1 drivers
+v000001576b4d4070_0 .var/i "i", 31 0;
+S_000001576b63ada0 .scope module, "dut" "lab7_4" 2 15, 3 1 0, S_000001576b63ac10;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 6 "addr";
+    .port_info 2 /OUTPUT 4 "data_out";
+    .port_info 3 /OUTPUT 6 "addr_out";
+P_000001576b4a33a0 .param/l "ADDR_WIDTH" 0 3 2, +C4<00000000000000000000000000000110>;
+P_000001576b4a33d8 .param/l "DATA_WIDTH" 0 3 2, +C4<00000000000000000000000000000100>;
+L_000001576b4d4440 .functor NOT 1, v000001576b4d3260_0, C4<0>, C4<0>, C4<0>;
+L_000001576b4d4910 .functor BUFZ 4, L_000001576b4d41b0, C4<0000>, C4<0000>, C4<0000>;
+L_000001576b4d4830 .functor BUFZ 6, v000001576b4a2b80_0, C4<000000>, C4<000000>, C4<000000>;
+v000001576b63a5b0_0 .net *"_ivl_2", 3 0, L_000001576b4d41b0;  1 drivers
+v000001576b63af30_0 .net *"_ivl_4", 7 0, L_000001576b4d3490;  1 drivers
+L_000001576b526868 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v000001576b6390f0_0 .net *"_ivl_7", 1 0, L_000001576b526868;  1 drivers
+v000001576b4a2a40_0 .net "addr", 5 0, v000001576b4a2e00_0;  1 drivers
+v000001576b4a2ae0_0 .net "addr_out", 5 0, L_000001576b4d4830;  alias, 1 drivers
+v000001576b4a2b80_0 .var "addr_reg", 5 0;
+v000001576b4c7bc0_0 .net "clk", 0 0, v000001576b4d3260_0;  1 drivers
+v000001576b4a2c20_0 .net "data_out", 3 0, L_000001576b4d4910;  alias, 1 drivers
+v000001576b4a2cc0 .array "rom", 63 0, 3 0;
+v000001576b4a2d60_0 .net "w_clk", 0 0, L_000001576b4d4440;  1 drivers
+E_000001576b4d76f0 .event posedge, v000001576b4a2d60_0;
+L_000001576b4d41b0 .array/port v000001576b4a2cc0, L_000001576b4d3490;
+L_000001576b4d3490 .concat [ 6 2 0 0], v000001576b4a2b80_0, L_000001576b526868;
+    .scope S_000001576b63ada0;
+T_0 ;
+    %vpi_call 3 19 "$readmemh", "../../rom.txt", v000001576b4a2cc0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001576b63ada0;
+T_1 ;
+    %wait E_000001576b4d76f0;
+    %load/vec4 v000001576b4a2a40_0;
+    %assign/vec4 v000001576b4a2b80_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_000001576b63ac10;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576b4d3260_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 6;
+    %store/vec4 v000001576b4a2e00_0, 0, 6;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v000001576b4d4070_0, 0, 32;
+T_2.0 ;
+    %load/vec4 v000001576b4d4070_0;
+    %cmpi/s 16, 0, 32;
+    %flag_or 5, 4;
+    %jmp/0xz T_2.1, 5;
+    %delay 20, 0;
+    %load/vec4 v000001576b4a2e00_0;
+    %addi 1, 0, 6;
+    %store/vec4 v000001576b4a2e00_0, 0, 6;
+    %load/vec4 v000001576b4d4070_0;
+    %addi 1, 0, 32;
+    %store/vec4 v000001576b4d4070_0, 0, 32;
+    %jmp T_2.0;
+T_2.1 ;
+    %end;
+    .thread T_2;
+    .scope S_000001576b63ac10;
+T_3 ;
+    %delay 10, 0;
+    %load/vec4 v000001576b4d3260_0;
+    %inv;
+    %store/vec4 v000001576b4d3260_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_000001576b63ac10;
+T_4 ;
+    %delay 380, 0;
+    %vpi_call 2 34 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+    .scope S_000001576b63ac10;
+T_5 ;
+    %vpi_call 2 39 "$monitor", "clk=%b addr=%b data_out=%b addr_out=%b", v000001576b4d3260_0, v000001576b4a2e00_0, v000001576b4d3530_0, v000001576b4d31c0_0 {0 0 0};
+    %end;
+    .thread T_5;
+    .scope S_000001576b63ac10;
+T_6 ;
+    %vpi_call 2 44 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "..\testbench.v";
+    "..\..\lab7_4.v";

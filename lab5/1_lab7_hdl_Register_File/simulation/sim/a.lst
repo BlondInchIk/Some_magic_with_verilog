@@ -1,0 +1,30 @@
+VCD info: dumpfile dump.vcd opened for output.
+clk=1 SW=4f LEDR=x
+clk=0 SW=4f LEDR=x
+clk=1 SW=4f LEDR=f
+clk=1 SW=5f LEDR=x
+clk=0 SW=5f LEDR=x
+clk=1 SW=5f LEDR=f
+clk=1 SW=6f LEDR=x
+clk=0 SW=6f LEDR=x
+clk=1 SW=6f LEDR=f
+clk=1 SW=7f LEDR=x
+clk=0 SW=7f LEDR=x
+clk=1 SW=7f LEDR=f
+clk=0 SW=7f LEDR=f
+clk=1 SW=7f LEDR=f
+clk=1 SW=00 LEDR=f
+clk=0 SW=00 LEDR=f
+clk=1 SW=00 LEDR=f
+clk=1 SW=10 LEDR=f
+clk=0 SW=10 LEDR=f
+clk=1 SW=10 LEDR=f
+clk=1 SW=20 LEDR=f
+clk=0 SW=20 LEDR=f
+clk=1 SW=20 LEDR=f
+clk=1 SW=30 LEDR=f
+clk=0 SW=30 LEDR=f
+clk=1 SW=30 LEDR=f
+clk=0 SW=30 LEDR=f
+..\testbench.v:43: $finish called at 200 (1ns)
+clk=1 SW=30 LEDR=f

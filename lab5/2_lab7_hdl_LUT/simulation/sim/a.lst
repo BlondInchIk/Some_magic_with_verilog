@@ -1,0 +1,18 @@
+VCD info: dumpfile dump.vcd opened for output.
+x=0000 y=0
+x=0001 y=0
+x=0010 y=0
+x=0011 y=0
+x=0100 y=0
+x=0101 y=0
+x=0110 y=0
+x=0111 y=0
+x=1000 y=0
+x=1001 y=0
+x=1010 y=0
+x=1011 y=0
+x=1100 y=0
+x=1101 y=0
+x=1110 y=0
+x=1111 y=1
+..\testbench.v:28: $finish called at 160 (1ns)

@@ -1,4 +1,4 @@
-module fifo1 #(
+module FIFO_mem_async #(
     parameter DSIZE = 8,
     parameter ASIZE = 4)
 	 (

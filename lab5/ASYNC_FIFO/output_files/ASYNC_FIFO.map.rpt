@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ASYNC_FIFO
-Mon Dec 11 19:14:29 2023
+Sat Dec 16 14:05:38 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -10,7 +10,25 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Source assignments for fifomem:U3|altsyncram:MEM_rtl_0|altsyncram_c3j1:auto_generated
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |FIFO_mem_async
+ 14. Parameter Settings for User Entity Instance: sync_r2w:U1
+ 15. Parameter Settings for User Entity Instance: sync_w2r:U2
+ 16. Parameter Settings for User Entity Instance: fifomem:U3
+ 17. Parameter Settings for User Entity Instance: rptr_empty:U4
+ 18. Parameter Settings for User Entity Instance: wptr_full:U5
+ 19. Parameter Settings for Inferred Entity Instance: fifomem:U3|altsyncram:MEM_rtl_0
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +52,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Dec 11 19:14:29 2023              ;
-; Quartus Prime Version       ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
-; Revision Name               ; ASYNC_FIFO                                     ;
-; Top-level Entity Name       ; FIFO_mem_async                                 ;
-; Family                      ; Cyclone V                                      ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Dec 16 14:05:38 2023          ;
+; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                   ; ASYNC_FIFO                                     ;
+; Top-level Entity Name           ; FIFO_mem_async                                 ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 49                                             ;
+; Total pins                      ; 24                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 128                                            ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -148,11 +171,312 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+; wptr_full.v                      ; yes             ; User Verilog HDL File        ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/wptr_full.v                ;         ;
+; sync_w2r.v                       ; yes             ; User Verilog HDL File        ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/sync_w2r.v                 ;         ;
+; sync_r2w3.v                      ; yes             ; User Verilog HDL File        ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/sync_r2w3.v                ;         ;
+; rptr_empty.v                     ; yes             ; User Verilog HDL File        ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/rptr_empty.v               ;         ;
+; FIFO_mem_async.v                 ; yes             ; User Verilog HDL File        ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v           ;         ;
+; fifomem.v                        ; yes             ; User Verilog HDL File        ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/fifomem.v                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_c3j1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/db/altsyncram_c3j1.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 29         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 36         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 9          ;
+;     -- 5 input functions                    ; 7          ;
+;     -- 4 input functions                    ; 6          ;
+;     -- <=3 input functions                  ; 14         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 49         ;
+;                                             ;            ;
+; I/O pins                                    ; 24         ;
+; Total MLAB memory bits                      ; 0          ;
+; Total block memory bits                     ; 128        ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; wclk~input ;
+; Maximum fan-out                             ; 36         ;
+; Total fan-out                               ; 428        ;
+; Average fan-out                             ; 3.04       ;
++---------------------------------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
+; |FIFO_mem_async                           ; 36 (0)              ; 49 (0)                    ; 128               ; 0          ; 24   ; 0            ; |FIFO_mem_async                                                                ; FIFO_mem_async  ; work         ;
+;    |fifomem:U3|                           ; 9 (9)               ; 9 (9)                     ; 128               ; 0          ; 0    ; 0            ; |FIFO_mem_async|fifomem:U3                                                     ; fifomem         ; work         ;
+;       |altsyncram:MEM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |FIFO_mem_async|fifomem:U3|altsyncram:MEM_rtl_0                                ; altsyncram      ; work         ;
+;          |altsyncram_c3j1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |FIFO_mem_async|fifomem:U3|altsyncram:MEM_rtl_0|altsyncram_c3j1:auto_generated ; altsyncram_c3j1 ; work         ;
+;    |rptr_empty:U4|                        ; 13 (13)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FIFO_mem_async|rptr_empty:U4                                                  ; rptr_empty      ; work         ;
+;    |sync_r2w:U1|                          ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FIFO_mem_async|sync_r2w:U1                                                    ; sync_r2w        ; work         ;
+;    |sync_w2r:U2|                          ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FIFO_mem_async|sync_w2r:U2                                                    ; sync_w2r        ; work         ;
+;    |wptr_full:U5|                         ; 14 (14)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FIFO_mem_async|wptr_full:U5                                                   ; wptr_full       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                              ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifomem:U3|altsyncram:MEM_rtl_0|altsyncram_c3j1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 8            ; 16           ; 8            ; 128  ; None ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++---------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                        ;
++---------------------------------------+-----------------------------------+
+; Register name                         ; Reason for Removal                ;
++---------------------------------------+-----------------------------------+
+; wptr_full:U5|wptr[4]                  ; Merged with wptr_full:U5|wbin[4]  ;
+; rptr_empty:U4|rptr[4]                 ; Merged with rptr_empty:U4|rbin[4] ;
+; Total Number of Removed Registers = 2 ;                                   ;
++---------------------------------------+-----------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 49    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 41    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; rptr_empty:U4|rempty                   ; 10      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------+
+; Source assignments for fifomem:U3|altsyncram:MEM_rtl_0|altsyncram_c3j1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------+
+; Assignment                      ; Value              ; From ; To                      ;
++---------------------------------+--------------------+------+-------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                       ;
++---------------------------------+--------------------+------+-------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |FIFO_mem_async ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; DSIZE          ; 8     ; Signed Integer                                        ;
+; ASIZE          ; 4     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_r2w:U1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; ADDRSIZE       ; 4     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sync_w2r:U2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; ADDRSIZE       ; 4     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifomem:U3 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; DATASIZE       ; 8     ; Signed Integer                 ;
+; ADDRSIZE       ; 4     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rptr_empty:U4 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; ADDRSIZE       ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wptr_full:U5 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; ADDRSIZE       ; 4     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: fifomem:U3|altsyncram:MEM_rtl_0 ;
++------------------------------------+----------------------+----------------------+
+; Parameter Name                     ; Value                ; Type                 ;
++------------------------------------+----------------------+----------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped              ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped              ;
+; WIDTH_A                            ; 8                    ; Untyped              ;
+; WIDTHAD_A                          ; 4                    ; Untyped              ;
+; NUMWORDS_A                         ; 16                   ; Untyped              ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped              ;
+; WIDTH_B                            ; 8                    ; Untyped              ;
+; WIDTHAD_B                          ; 4                    ; Untyped              ;
+; NUMWORDS_B                         ; 16                   ; Untyped              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped              ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped              ;
+; BYTE_SIZE                          ; 8                    ; Untyped              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped              ;
+; INIT_FILE                          ; UNUSED               ; Untyped              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped              ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped              ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped              ;
+; CBXI_PARAMETER                     ; altsyncram_c3j1      ; Untyped              ;
++------------------------------------+----------------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                            ;
++-------------------------------------------+---------------------------------+
+; Name                                      ; Value                           ;
++-------------------------------------------+---------------------------------+
+; Number of entity instances                ; 1                               ;
+; Entity Instance                           ; fifomem:U3|altsyncram:MEM_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
+;     -- WIDTH_A                            ; 8                               ;
+;     -- NUMWORDS_A                         ; 16                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                    ;
+;     -- WIDTH_B                            ; 8                               ;
+;     -- NUMWORDS_B                         ; 16                              ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                       ;
++-------------------------------------------+---------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 49                          ;
+;     CLR               ; 41                          ;
+;     ENA               ; 8                           ;
+; arriav_lcell_comb     ; 37                          ;
+;     normal            ; 37                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 6                           ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 9                           ;
+; boundary_port         ; 24                          ;
+; stratixv_ram_block    ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.35                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,7 +485,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Dec 11 19:14:16 2023
+    Info: Processing started: Sat Dec 16 14:05:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ASYNC_FIFO -c ASYNC_FIFO
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -174,16 +498,64 @@ Info (12021): Found 1 design units, including 1 entities, in source file sync_r2
 Info (12021): Found 1 design units, including 1 entities, in source file rptr_empty.v
     Info (12023): Found entity 1: rptr_empty File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/rptr_empty.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fifo_mem_async.v
-    Info (12023): Found entity 1: fifo1 File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 1
+    Info (12023): Found entity 1: FIFO_mem_async File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fifomem.v
     Info (12023): Found entity 1: fifomem File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/fifomem.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file afifo.v
     Info (12023): Found entity 1: Async_FIFO File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/AFIFO.v Line: 1
-Error (12007): Top-level design entity "FIFO_mem_async" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4785 megabytes
-    Error: Processing ended: Mon Dec 11 19:14:29 2023
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:23
+Info (12127): Elaborating entity "FIFO_mem_async" for the top level hierarchy
+Info (12128): Elaborating entity "sync_r2w" for hierarchy "sync_r2w:U1" File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 22
+Info (12128): Elaborating entity "sync_w2r" for hierarchy "sync_w2r:U2" File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 29
+Info (12128): Elaborating entity "fifomem" for hierarchy "fifomem:U3" File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 38
+Info (12128): Elaborating entity "rptr_empty" for hierarchy "rptr_empty:U4" File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 49
+Info (12128): Elaborating entity "wptr_full" for hierarchy "wptr_full:U5" File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/FIFO_mem_async.v Line: 59
+Warning (276027): Inferred dual-clock RAM node "fifomem:U3|MEM_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "fifomem:U3|MEM_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 4
+        Info (286033): Parameter NUMWORDS_A set to 16
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 4
+        Info (286033): Parameter NUMWORDS_B set to 16
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (12130): Elaborated megafunction instantiation "fifomem:U3|altsyncram:MEM_rtl_0"
+Info (12133): Instantiated megafunction "fifomem:U3|altsyncram:MEM_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "4"
+    Info (12134): Parameter "NUMWORDS_A" = "16"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "4"
+    Info (12134): Parameter "NUMWORDS_B" = "16"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c3j1.tdf
+    Info (12023): Found entity 1: altsyncram_c3j1 File: C:/HSE/CSIAK/Some_magic_with_verilog/lab5/ASYNC_FIFO/db/altsyncram_c3j1.tdf Line: 28
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 78 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Sat Dec 16 14:05:38 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 
